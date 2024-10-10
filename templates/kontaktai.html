@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Kontaktai</h1>
+
+<p>Norite sužinoti daugiau apie mūsų „Odoo“ diegimo, programavimo ar palaikymo paslaugas? Susisiekite su mumis ir mes padėsime rasti geriausią sprendimą jūsų verslui.</p>
+
+<form method="POST" action="/kontaktai">
+    <div class="form-group">
+        <label for="name">Jūsų vardas:</label>
+        <input type="text" class="form-control" id="name" name="name" required placeholder="Įveskite savo vardą">
+    </div>
+    <div class="form-group">
+        <label for="email">El. paštas:</label>
+        <input type="email" class="form-control" id="email" name="email" required placeholder="Įveskite savo el. pašto adresą">
+    </div>
+    <div class="form-group">
+        <label for="message">Žinutė:</label>
+        <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Įveskite savo klausimą arba užklausą"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Siųsti</button>
+</form>
+
+{% endblock %}
