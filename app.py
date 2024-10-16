@@ -26,6 +26,10 @@ def apie():
 def paslaugos():
     return render_template('paslaugos.html')
 
+@app.route('/success')
+def success():
+    return render_template('success.html')
+
 @app.route('/kontaktai', methods=['GET', 'POST'])
 def kontaktai():
     if request.method == 'POST':
@@ -42,7 +46,7 @@ def kontaktai():
         mail.send(msg)
 
         flash('Jūsų užklausa sėkmingai išsiųsta!', 'success')
-        return redirect(url_for('kontaktai'))
+        return redirect(url_for('success'))
 
     return render_template('kontaktai.html')
 
